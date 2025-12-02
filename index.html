@@ -104,9 +104,7 @@
             display: inline-block;
             transition: 0.3s;
         }
-        .print-btn:hover {
-            background:#059669;
-        }
+        .print-btn:hover { background:#059669; }
         .pdf-btn {
             background: #ef4444;
             color: white;
@@ -119,9 +117,7 @@
             display: inline-block;
             transition: 0.3s;
         }
-        .pdf-btn:hover {
-            background: #dc2626;
-        }
+        .pdf-btn:hover { background: #dc2626; }
         .important-note {
             background: #fee2e2;
             border-left: 4px solid #ef4444;
@@ -138,23 +134,15 @@
             color: #7f1d1d;
             font-size: 1rem;
         }
-        .important-note p {
-            margin: 0.3rem 0;
-        }
+        .important-note p { margin: 0.3rem 0; }
         .important-note a {
             color: #dc2626;
             font-weight: 600;
             text-decoration: underline;
         }
-        .important-note a:hover {
-            color: #991b1b;
-        }
+        .important-note a:hover { color: #991b1b; }
         @media print {
-            .print-btn,
-            .pdf-btn,
-            .class-selector,
-            .main-header,
-            .revision-notice {
+            .print-btn, .pdf-btn, .class-selector, .main-header, .revision-notice {
                 display: none !important;
             }
             body { background: white !important; }
@@ -274,12 +262,7 @@
                         <h2>📚 ${cls.name}</h2>
                         <p>Exam Schedule</p>
                     </div>
-
-                    <!-- Print to PDF button -->
-                    <button class="print-btn" onclick="printClass(${idx})">
-                        🖨 Print
-                    </button>
-
+                    <button class="print-btn" onclick="printClass(${idx})">🖨 Print</button>
                     <table class="exam-table">
                         <thead>
                             <tr>
@@ -300,19 +283,13 @@
                             `).join('')}
                         </tbody>
                     </table>
-
-                    <!-- Save as PDF button at bottom -->
                     <div style="text-align: center;">
-                        <button class="pdf-btn" onclick="printClass(${idx})">
-                            📄 Save as PDF
-                        </button>
+                        <button class="pdf-btn" onclick="printClass(${idx})">📄 Save as PDF</button>
                     </div>
-
-                    <!-- Important Notes in Red -->
                     <div class="important-note">
                         <strong>⚠️ Important Information:</strong>
                         <p>• Please refer to the revision tracker for details of learning targets.</p>
-                        <p>• <a href="https://plashetgrovemasjid.org/mdwi-exam-policy/ - Click Here to Read</a></p>
+                        <p>• <a href="https://yourschool.com/exam-policy" target="_blank">Exam Policy - Click Here to Read</a></p>
                         <p>• All days during exam schedule are to be attended.</p>
                     </div>
                 </div>
@@ -324,7 +301,7 @@
                 tt.style.display = i === index ? 'block' : 'none';
             });
             window.print();
-            location.reload();
+            setTimeout(() => location.reload(), 100);
         }
 
         function showClass(idx) {
