@@ -160,7 +160,7 @@
     <div class="container">
         <div class="main-header">
             <h1>📖 Islamic Studies Exam Timetable</h1>
-            <p>December 2025 - Individual Class Schedules</p>
+            <p>December 2024 - Individual Class Schedules</p>
         </div>
         <div class="revision-notice">📚 Revision Period Starts: Thursday, 4th December</div>
         <div class="class-selector">
@@ -180,7 +180,7 @@
         const classData = [
             { name: "Reception", exams: [
                 ["19th Dec", "Friday", "Qaidah", "-"]
-            ]},
+            ], specialNote: "Please note that on exam day only, class timing will be from 4:55 PM to 7:00 PM."},
             { name: "Class 1", exams: [
                 ["12th Dec", "Friday", "Surahs & Duas", "-"],
                 ["15th Dec", "Monday", "Fiqh", "Islamiyyah"],
@@ -232,7 +232,7 @@
                 ["16th Dec", "Tuesday", "Seerah, Akhlaaq", "An-Nasihah"],
                 ["17th Dec", "Wed", "Revision Day", "An-Nasihah"],
                 ["18th Dec", "Thursday", "Aqaid, Tarikh", "An-Nasihah"],
-                ["19th Dec", "Friday", "Duas", "Basic Essentials Book"]
+                ["19th Dec", "Friday", "Duas", "A Childs Gift Book"]
             ]},
             { name: "Class 7", exams: [
                 ["11th Dec", "Thursday", "Quran", "-"],
@@ -241,7 +241,7 @@
                 ["16th Dec", "Tuesday", "Seerah, Akhlaaq", "An-Nasihah"],
                 ["17th Dec", "Wed", "Revision Day", "An-Nasihah"],
                 ["18th Dec", "Thursday", "Aqaid, Tarikh", "An-Nasihah"],
-                ["19th Dec", "Friday", "Duas", "Basic Essentials Book"]
+                ["19th Dec", "Friday", "Duas", "A Childs Gift Book"]
             ]},
             { name: "Class 8", exams: [
                 ["11th Dec", "Thursday", "Quran", "-"],
@@ -250,7 +250,7 @@
                 ["16th Dec", "Tuesday", "Seerah, Akhlaaq", "An-Nasihah"],
                 ["17th Dec", "Wed", "Revision Day", "An-Nasihah"],
                 ["18th Dec", "Thursday", "Aqaid, Tarikh", "An-Nasihah"],
-                ["19th Dec", "Friday", "Duas", "Basic Essentials Book"]
+                ["19th Dec", "Friday", "Duas", "A Childs Gift Book"]
             ]}
         ];
 
@@ -262,6 +262,7 @@
                         <h2>📚 ${cls.name}</h2>
                         <p>Exam Schedule</p>
                     </div>
+                    ${cls.specialNote ? `<div class="revision-notice" style="margin-bottom: 1rem;">⏰ ${cls.specialNote}</div>` : ''}
                     <button class="print-btn" onclick="printClass(${idx})">🖨 Print</button>
                     <table class="exam-table">
                         <thead>
@@ -289,7 +290,7 @@
                     <div class="important-note">
                         <strong>⚠️ Important Information:</strong>
                         <p>• Please refer to the revision tracker for details of learning targets.</p>
-                        <p>• <a href="https://plashetgrovemasjid.org/mdwi-exam-policy/">Exam Policy - Click Here to Read</a></p>
+                        <p>• <a href="https://yourschool.com/exam-policy" target="_blank">Exam Policy - Click Here to Read</a></p>
                         <p>• All days during exam schedule are to be attended.</p>
                     </div>
                 </div>
